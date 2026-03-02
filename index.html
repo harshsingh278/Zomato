@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Zomato Clone</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zomato Pro</title>
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Zomato Clone</h1>
+<header class="hero">
+    <h1>Zomato</h1>
+    <p>Discover the best food & drinks</p>
+    <input type="text" id="search" placeholder="Search for food...">
 </header>
 
-<section class="search-section">
-    <input type="text" id="search" placeholder="Search food..." />
+<section class="filters">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('veg')">Veg</button>
+    <button onclick="filterCategory('nonveg')">Non-Veg</button>
+    <button onclick="filterCategory('fastfood')">Fast Food</button>
 </section>
 
 <section class="container" id="foodContainer"></section>
 
 <aside class="cart">
-    <h2>Cart</h2>
+    <h2>Your Cart</h2>
     <div id="cartItems"></div>
-    <div class="total">
-        Total: ₹<span id="total">0</span>
-    </div>
+    <div class="total">Total: ₹<span id="total">0</span></div>
+    <button class="checkout" onclick="checkout()">Checkout</button>
 </aside>
 
-<!-- JavaScript -->
-<script src="js/script.js"></script>
+<!-- Link JavaScript -->
+<script src="script.js"></script>
+
 </body>
 </html>
